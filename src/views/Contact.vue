@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    <h1>This is the Home Page</h1>
+    <h1>Contact Us</h1>
     <p>Any question or remarks? Just write us a message!</p>
   </div>
 
@@ -10,26 +10,28 @@
       <div class="col-4 p-4">
         <h2>Contact Information</h2>
 
-        <p class="p-2">Fill up the form and our Team will get back to within 24 hours</p>
+        <p class="p-2">
+          Fill up the form and our Team will get back to within 24 hours
+        </p>
 
         <div class="text-start p-2">
-          <p><i class="far fa-phone">&nbsp; +549 2227 417936</i></p>
+          <p>
+            <i class="far fa-envelope">&nbsp;&nbsp; agusszurdob@gmail.com</i>
+          </p>
         </div>
 
         <div class="text-start p-2">
-          <p><i class="far fa-envelope">&nbsp; agusszurdob@gmail.com</i></p>
+          <p><i class="far fa-phone">&nbsp;&nbsp; +549 2227 417936</i></p>
         </div>
 
         <div class="text-start p-2">
-          <p><i class="far fa-map-pin">&nbsp; Buenos Aires, Arg</i></p>
+          <p><i class="far fa-map-pin">&nbsp;&nbsp; Buenos Aires, Arg</i></p>
         </div>
 
         <div class="text-center links">
-          <p>
-            <i class="fab fa-facebook-f"></i>
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-github"></i>
-          </p>
+            <a v-for="link in links" :key="link" :href="`${link.url}`">
+              <i :class="`${link.icon}`"></i>
+            </a>
         </div>
       </div>
 
@@ -102,7 +104,9 @@
         </div>
 
         <div class="col-12 text-end">
-          <button class="btn btn-primary" disabled type="submit">Send Message</button>
+          <button class="btn btn-primary" disabled type="submit">
+            Send Message
+          </button>
         </div>
       </div>
     </div>
@@ -112,8 +116,17 @@
 <script>
 // @ is an alias to /src
 export default {
-  name: "Home",
+  name: "Contact",
   components: {},
+  data() {
+    return {
+      links: [
+        { icon: "fab fa-facebook-f", url: "https://github.com/agusb98" },
+        { icon: "fab fa-instagram", url: "https://github.com/agusb98" },
+        { icon: "fab fa-github", url: "https://github.com/agusb98" },
+      ],
+    };
+  },
 };
 </script>
 
@@ -150,13 +163,15 @@ export default {
 
     cursor: pointer;
 
-    &:hover,
-    &:checked,
-    &:enabled {
+    &:hover {
       color: #00afea;
       border-color: #00afea;
     }
   }
+}
+
+a {
+  color: #edf2fc;
 }
 
 .form-check-input {
