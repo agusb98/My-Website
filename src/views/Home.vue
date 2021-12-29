@@ -10,7 +10,9 @@
       <div class="col-4 p-4">
         <h2>Contact Information</h2>
 
-        <p class="p-2">Fill up the form and our Team will get back to within 24 hours</p>
+        <p class="p-2">
+          Fill up the form and our Team will get back to within 24 hours
+        </p>
 
         <div class="text-start p-2">
           <p><i class="far fa-phone">&nbsp; +549 2227 417936</i></p>
@@ -102,10 +104,21 @@
         </div>
 
         <div class="col-12 text-end">
-          <button class="btn btn-primary" disabled type="submit">Send Message</button>
+          <button class="btn btn-primary" disabled type="submit">
+            Send Message
+          </button>
         </div>
       </div>
     </div>
+  </div>
+
+  <div class="container-info-app">
+    <section id="copyright">
+      <div class="wrapper">
+        Made by Baez Nuñez, Agustin
+        <br />Vue 3 + Bootstrap 5
+      </div>
+    </section>
   </div>
 </template>
 
@@ -161,5 +174,22 @@ export default {
 
 .form-check-input {
   cursor: pointer;
+}
+
+#copyright {
+  background: transparent;
+  color: var(--secondary-color);
+  margin-bottom: -20px;
+  text-align: center;
+  font-size: 15px;
+  font-style: italic;
+  font-family: "Playfair Display", serif;
+}
+
+.container-info-app {
+  position: absolute;
+  top: 94%;
+  left: 0%;
+  right: 0%;
 }
 </style>
