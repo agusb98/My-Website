@@ -125,8 +125,8 @@ export default {
 
 <style lang="scss" scoped>
 header {
-  height: 10%;
-  width: 100%;
+  height: 10vh;
+  width: 100vw;
   z-index: 99;
   position: relative;
   transition: 0.5s ease all;
@@ -144,12 +144,12 @@ header {
 
     position: relative;
     transition: 0.5s ease all;
-    width: 100%;
-    padding: 0.2rem 0;
+    width: 100vw;
+    padding: 0.2vh 0;
 
     // Response
     @media (min-width: 1140px) {
-      max-width: 100%;
+      max-width: 100vw;
     }
 
     ul,
@@ -162,16 +162,16 @@ header {
 
     li {
       text-transform: uppercase;
-      padding: 1rem;
-      margin-left: 1rem;
+      padding: 1em;
+      margin-left: 1em;
     }
 
     .link {
-      font-size: 0.9rem;
+      font-size: 0.9em;
       font-weight: bold;
       transition: 0.5s ease all;
-      padding-bottom: 0.1rem;
-      border-bottom: 0.01rem solid transparent;
+      padding-bottom: 0.5vh;
+      border-bottom: 0.02vh solid transparent;
 
       &:hover {
         color: #00afea;
@@ -182,14 +182,12 @@ header {
     .branding {
       display: flex;
       align-items: center;
-
-      margin-left: 2rem;
+      margin-left: 1vw;
 
       img {
         width: 3em;
         transition: 0.5s ease all;
 
-        margin-left: 1rem;
         cursor: pointer;
       }
     }
@@ -208,12 +206,12 @@ header {
       left: 0%;
       position: absolute;
 
-      height: 100%;
-      padding: 0.5rem;
+      height: 100vh;
+      padding: 0.5em;
 
       i {
         cursor: pointer;
-        font-size: 1.5rem;
+        font-size: 1.5em;
         transition: 0.8s ease all;
       }
     }
@@ -228,12 +226,12 @@ header {
       position: fixed;
       width: 250px;
       max-width: 250px;
-      height: 50%;
+      height: 50vh;
       background-color: var(--primary-color);
-      top: 3.4rem;
+      top: 3.4em;
       left: 0;
       border-radius: 0% 2% 50%;
-      box-shadow: 1rem 1rem 2rem #00afea73;
+      box-shadow: 1em 1em 2em #00afea73;
 
       li {
         margin-left: 0;
@@ -266,7 +264,7 @@ header {
     0 2px 4px -1px rgba(0, 0, 0, 0.06);
 
   nav {
-    padding: 0.5rem 0;
+    padding: 0.5em 0;
 
     .branding {
       width: 40px;
@@ -278,7 +276,7 @@ header {
 
 .mode_light {
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 1em;
 
   &:hover {
     color: #eeda2b;

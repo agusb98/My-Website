@@ -1,13 +1,17 @@
 <template>
-  <div class="container-fluid p-2">
-    <div class="header">
+  <div class="container-fluid p-0">
+    <section class="section-one p-4">1</section>
+    <section class="section-two p-4">2</section>
+    <section class="section-three p-4">3</section>
+
+    <!-- <div class="header">
       <h1>This is the Home Page</h1>
       <p>Any question or remarks? Just write us a message!</p>
-    </div>
+    </div> -->
 
+    <!-- 
     <div class="container my-shadow">
       <div class="row p-1">
-        <!-- Information right -->
         <div class="col-4 p-4">
           <h2>Contact Information</h2>
 
@@ -36,7 +40,6 @@
           </div>
         </div>
 
-        <!-- Form left -->
         <div class="col-8 p-3 d-flex flex-wrap justify-content-between">
           <div class="form-floating col-md-5 mb-1 needs-validation" novalidate>
             <input
@@ -119,15 +122,16 @@
         </div>
       </div>
     </div>
+ -->
 
-    <div class="container-info-app">
+    <!-- <div class="container-info-app">
       <section id="copyright">
         <div class="wrapper">
           Made by Baez Nuñez, Agustin
           <br />Vue 3 + Bootstrap 5
         </div>
       </section>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -139,70 +143,96 @@ export default {
 };
 </script>
 
+// <style lang="scss" scoped>
+// .container-fluid {
+//   height: 90%;
+// }
+
+// .header {
+//   text-align: center;
+// }
+
+// .container {
+//   // background-color: #3c0741;
+//   background-color: #ebdcec;
+//   color: #3c0741;
+// }
+
+// .container,
+// .col-4 {
+//   border-radius: 0.5em;
+// }
+
+// .col-4 {
+//   color: #ebdcec;
+//   background-color: #3c0741;
+//   text-align: center;
+// }
+
+// .links {
+//   display: flex;
+//   justify-content: center;
+
+//   i {
+//     font-size: 1.8em;
+//     margin-right: 0.5em;
+//     margin-left: 0.5em;
+
+//     cursor: pointer;
+
+//     &:hover,
+//     &:checked,
+//     &:enabled {
+//       color: #00afea;
+//       border-color: #00afea;
+//     }
+//   }
+// }
+
+// .form-check-input {
+//   cursor: pointer;
+// }
+
+// #copyright {
+//   background: transparent;
+//   color: var(--secondary-color);
+//   margin-bottom: -20px;
+//   text-align: center;
+//   font-size: 15px;
+//   font-style: italic;
+//   font-family: "Playfair Display", serif;
+// }
+
+// .container-info-app {
+//   position: absolute;
+//   top: 93%;
+//   left: 0%;
+//   right: 0%;
+// }
+//
+</style>
+
 <style lang="scss" scoped>
 .container-fluid {
-  height: 90%;
+  height: 90vh;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
 }
 
-.header {
-  text-align: center;
+section {
+  height: 100vh;
+  scroll-snap-align: start;
 }
 
-.container {
-  // background-color: #3c0741;
-  background-color: #ebdcec;
-  color: #3c0741;
+.section-one {
+  background: brown;
 }
 
-.container,
-.col-4 {
-  border-radius: 0.5em;
+.section-two {
+  background: green;
 }
 
-.col-4 {
-  color: #ebdcec;
-  background-color: #3c0741;
-  text-align: center;
-}
-
-.links {
-  display: flex;
-  justify-content: center;
-
-  i {
-    font-size: 1.8em;
-    margin-right: 0.5em;
-    margin-left: 0.5em;
-
-    cursor: pointer;
-
-    &:hover,
-    &:checked,
-    &:enabled {
-      color: #00afea;
-      border-color: #00afea;
-    }
-  }
-}
-
-.form-check-input {
-  cursor: pointer;
-}
-
-#copyright {
-  background: transparent;
-  color: var(--secondary-color);
-  margin-bottom: -20px;
-  text-align: center;
-  font-size: 15px;
-  font-style: italic;
-  font-family: "Playfair Display", serif;
-}
-
-.container-info-app {
-  position: absolute;
-  top: 93%;
-  left: 0%;
-  right: 0%;
+.section-three {
+  background: blue;
 }
 </style>
