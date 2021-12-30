@@ -1,9 +1,7 @@
 <template>
   <div class="app">
     <Navigation />
-    <div class="container mt-4">
-      <router-view />
-    </div>
+    <router-view />
   </div>
 </template>
 
@@ -70,5 +68,19 @@ export default {
   color: var(--secondary-color) !important;
   background-color: var(--primary-color) !important;
   border-color: var(--primary-color) !important;
+}
+
+input[type="text"],
+textarea {
+  background-color: var(--primary-color) !important;
+  color: var(--secondary-color) !important;
+}
+
+input[type="checkbox"] {
+  cursor: pointer;
+}
+
+label {
+  color: var(--secondary-color);
 }
 </style>

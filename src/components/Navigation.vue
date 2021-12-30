@@ -14,7 +14,9 @@
 
       <ul v-show="!mobile" class="navigation">
         <li v-for="link in links" :key="link">
-          <router-link class="link" :to="{ path: link.router }">{{ link.name }}</router-link>
+          <router-link class="link" :to="{ path: link.router }">{{
+            link.name
+          }}</router-link>
         </li>
         <li>
           <i @click="setLightMode" class="fas fa-sun mode_light"></i>
@@ -56,7 +58,7 @@ export default {
       mobileNav: null,
       windowWidth: null,
       links: [
-        { name: "About", router: "/Contact" },
+        { name: "About", router: "/About" },
         { name: "Portofio", router: "/Contact" },
         { name: "Contact", router: "/Contact" },
       ],
@@ -123,11 +125,15 @@ export default {
 
 <style lang="scss" scoped>
 header {
-  background-color: rgba(8, 8, 8, 0.486);
-  z-index: 99;
+  height: 10%;
   width: 100%;
+  z-index: 99;
   position: relative;
   transition: 0.5s ease all;
+
+  &:hover {
+    background-color: rgba(8, 8, 8, 0.486);
+  }
 
   nav {
     display: flex;
@@ -162,6 +168,7 @@ header {
 
     .link {
       font-size: 0.9rem;
+      font-weight: bold;
       transition: 0.5s ease all;
       padding-bottom: 0.1rem;
       border-bottom: 0.01rem solid transparent;
@@ -179,7 +186,7 @@ header {
       margin-left: 2rem;
 
       img {
-        width: 3rem;
+        width: 3em;
         transition: 0.5s ease all;
 
         margin-left: 1rem;

@@ -3,7 +3,7 @@
     <div class="container-xxl">
       <div class="row justify-content-between pt-4">
         <div class="col-xl">
-          <h1>¡Contact with Admin!</h1>
+          <h1>¡Contacta con M.AD!</h1>
           <h2>
             Pregúntanos, cuéntanos qué te gustaría <br />
             estudiar y nosotros te informaremos. ¡Estamos <br />
@@ -33,7 +33,7 @@
       <div class="row-3 mt-2 p-4 text-center justify-content-center">
         <div class="progress my-shadow" style="height: 3em">
           <div
-            class="progress-bar-striped progress-bar-animated bg-success active"
+            class="progress-bar-striped bg-success"
             role="progressbar"
             :style="{ width: progress + '%' }"
             aria-valuenow="0"
@@ -43,7 +43,7 @@
         </div>
       </div>
 
-      <form v-if="progress == 1" @submit.prevent="formOne">
+      <form v-if="progress == 0" @submit.prevent="formOne">
         <div
           class="
             contact-form
@@ -149,7 +149,7 @@
             <button
               class="btn btn-primary"
               @click="
-                progress = 1;
+                progress = 0;
                 needs = [];
               "
             >
@@ -234,12 +234,12 @@ export default {
   name: "About",
   data() {
     return {
-      name: "",
-      email: "",
-      phone_number: "",
+      name: "Agustin",
+      email: "agus@gmail.com",
+      phone_number: "2227417936",
       needs: [],
       message: "",
-      progress: 1,
+      progress: 0,
     };
   },
   methods: {
@@ -345,7 +345,7 @@ export default {
 
 <style scoped>
 .container-fluid {
-  height: 90%;
+  height: 92%;
 }
 
 .contact-form,
@@ -353,16 +353,8 @@ export default {
   border-radius: 0.5em;
 }
 
-.contact-form {
-  background-color: rgba(51, 51, 51, 0.486);
-}
-
 .contact-form:hover {
   background-color: rgba(8, 8, 8, 0.486);
-}
-
-.success-form:hover {
-  background-color: rgba(80, 122, 82, 0.486);
 }
 
 .success-form:hover {
@@ -371,6 +363,15 @@ export default {
 
 .progress {
   background-color: var(--secondary-color);
+}
+
+.progress .progress-bar {
+  transition: unset;
+}
+
+.progress-bar {
+    -webkit-transition: width 7s !important;
+    transition: width 7s !important;
 }
 
 input {
