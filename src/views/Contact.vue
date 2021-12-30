@@ -361,7 +361,7 @@ export default {
   background-color: rgba(8, 8, 8, 0.486);
 }
 
-.success-form:hover {
+.success-form {
   background-color: rgba(80, 122, 82, 0.486);
 }
 
