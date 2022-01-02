@@ -35,7 +35,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 * {
   margin: 0;
   padding: 0;
@@ -44,6 +43,7 @@ export default {
 
 .app {
   height: 100vh;
+  overflow-y: hidden;
 
   // background-image: linear-gradient(62deg, var(--primary-color) 0%, #33273f 100%);
   background-color: var(--primary-color);
@@ -55,9 +55,10 @@ export default {
 
 /* Global css */
 <style lang="scss">
+
 :root {
-  --primary-color: #edf2fc;
-  --secondary-color: #212121;
+  --primary-color: #f8f5ee;
+  --secondary-color: #472425;
 }
 
 .my-shadow {
@@ -67,8 +68,8 @@ export default {
 }
 
 .dark-theme {
-  --primary-color: #212121;
-  --secondary-color: #edf2fc;
+  --primary-color: #472425;
+  --secondary-color: #f8f5ee;
 }
 
 .btn-primary {
@@ -89,5 +90,22 @@ input[type="checkbox"] {
 
 label {
   color: var(--secondary-color);
+}
+
+h1,
+h2,
+h3,
+ul,
+.link,
+p {
+  line-height: 1;
+  font-family: "futura_m";
+  font-weight: normal;
+  font: inherit;
+  text-shadow: 0 10px 30px rgb(2 11 22 / 50%);
+}
+
+h1{
+  font-size: 12rem !important;
 }
 </style>

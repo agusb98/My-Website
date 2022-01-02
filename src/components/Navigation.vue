@@ -1,51 +1,22 @@
 <template>
-  <header :class="{ 'scrolled-nav': scrolledNav }">
-    <nav>
-      <div class="branding">
-        <router-link to="/Home">
-          <img src="@/assets/logo.png" alt="logo" />
-        </router-link>
-      </div>
+  <nav class="navbar navbar-expand-lg d-flex justify-content-between">
+    <div class="branding">
+      <router-link to="/Home">
+        <img src="@/assets/logo.png" alt="logo" />
+      </router-link>
+    </div>
 
-      <!-- <form v-show="!mobile" class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form> -->
-
-      <ul v-show="!mobile" class="navigation">
-        <li v-for="link in links" :key="link">
-          <router-link class="link" :to="{ path: link.router }">{{
-            link.name
-          }}</router-link>
-        </li>
-        <li>
-          <i @click="setLightMode" class="fas fa-sun mode_light"></i>
-        </li>
-      </ul>
-
-      <div v-show="mobile" class="icon">
-        <i
-          @click="toggleMobileNav"
-          v-show="mobile"
-          class="far fa-bars"
-          :class="{ 'icon-active': mobileNav }"
-        ></i>
-      </div>
-
-      <transition name="mobile-nav">
-        <ul v-show="mobileNav" class="dropdown-nav">
-          <li v-for="link in links" :key="link">
-            <router-link class="link" :to="{ path: link.router }">{{
-              link.name
-            }}</router-link>
-          </li>
-          <li>
-            <i @click="setLightMode" class="fas fa-sun mode_light"></i>
-          </li>
-        </ul>
-      </transition>
-    </nav>
-  </header>
+    <ul class="d-flex justify-content-between">
+      <li v-for="link in links" :key="link">
+        <router-link class="link" :to="{ path: link.router }">{{
+          link.name
+        }}</router-link>
+      </li>
+      <li>
+        <i @click="setLightMode" class="fas fa-sun mode_light"></i>
+      </li>
+    </ul>
+  </nav>
 </template>
 
 <script>
@@ -53,37 +24,14 @@ export default {
   name: "navigation",
   data() {
     return {
-      scrolledNav: null,
-      mobile: true,
-      mobileNav: null,
-      windowWidth: null,
       links: [
         { name: "About", router: "/About" },
-        { name: "Portofio", router: "/Contact" },
+        { name: "Example", router: "/Example" },
         { name: "Contact", router: "/Contact" },
       ],
     };
   },
-
-  created() {
-    window.addEventListener("resize", this.checkScreen);
-    this.checkScreen();
-  },
-
-  mounted() {
-    window.addEventListener("scroll", this.updateScroll);
-  },
-
   methods: {
-    toggleMobileNav() {
-      this.mobileNav = !this.mobileNav;
-    },
-
-    updateScroll() {
-      const scrollPosition = window.scrollY;
-      this.scrolledNav = scrollPosition > 50;
-    },
-
     checkScreen() {
       this.windowWidth = window.innerWidth;
 
@@ -124,154 +72,30 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-header {
-  height: 10vh;
-  width: 100vw;
-  z-index: 99;
-  position: relative;
-  transition: 0.5s ease all;
+.navbar {
+  --bs-bg-opacity: none;
+  background-color: rgba(8, 8, 8, 0.486);
+}
 
+ul,
+.link {
+  font-weight: 500;
+  color: var(--secondary-color);
+  list-style: none;
+  text-decoration: none;
+}
+
+.link {
   &:hover {
-    background-color: rgba(8, 8, 8, 0.486);
-  }
-
-  nav {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center;
-
-    position: relative;
-    transition: 0.5s ease all;
-    width: 100vw;
-    padding: 0.2vh 0;
-
-    // Response
-    @media (min-width: 1140px) {
-      max-width: 100vw;
-    }
-
-    ul,
-    .link {
-      font-weight: 500;
-      color: var(--secondary-color);
-      list-style: none;
-      text-decoration: none;
-    }
-
-    li {
-      text-transform: uppercase;
-      padding: 1em;
-      margin-left: 1em;
-    }
-
-    .link {
-      font-size: 0.9em;
-      font-weight: bold;
-      transition: 0.5s ease all;
-      padding-bottom: 0.5vh;
-      border-bottom: 0.02vh solid transparent;
-
-      &:hover {
-        color: #00afea;
-        border-color: #00afea;
-      }
-    }
-
-    .branding {
-      display: flex;
-      align-items: center;
-      margin-left: 1vw;
-
-      img {
-        width: 3em;
-        transition: 0.5s ease all;
-
-        cursor: pointer;
-      }
-    }
-
-    .navigation {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .icon {
-      display: flex;
-      align-items: center;
-
-      top: 0;
-      left: 0%;
-      position: absolute;
-
-      height: 100vh;
-      padding: 0.5em;
-
-      i {
-        cursor: pointer;
-        font-size: 1.5em;
-        transition: 0.8s ease all;
-      }
-    }
-
-    .icon-active {
-      transform: rotate(180deg);
-    }
-
-    .dropdown-nav {
-      display: flex;
-      flex-direction: column;
-      position: fixed;
-      width: 250px;
-      max-width: 250px;
-      height: 50vh;
-      background-color: var(--primary-color);
-      top: 3.4em;
-      left: 0;
-      border-radius: 0% 2% 50%;
-      box-shadow: 1em 1em 2em #00afea73;
-
-      li {
-        margin-left: 0;
-
-        .link {
-          color: var(--secondary-color);
-        }
-      }
-    }
-
-    .mobile-nav-enter-active,
-    .mobile-nav-leave-active {
-      transition: 1s ease all;
-    }
-
-    .mobile-nav-enter-from,
-    .mobile-nav-leave-to {
-      transform: translateX(-250px);
-    }
-
-    .mobile-nav-enter-to {
-      transform: translateX(0);
-    }
+    color: #00afea;
+    border-color: #00afea;
   }
 }
 
-.scrolled-nav {
-  background-color: #000;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
-
-  nav {
-    padding: 0.5em 0;
-
-    .branding {
-      width: 40px;
-      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-        0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    }
-  }
+li {
+  text-transform: uppercase;
+  padding: 1em;
+  margin-left: 1em;
 }
 
 .mode_light {
@@ -282,4 +106,17 @@ header {
     color: #eeda2b;
   }
 }
+
+.branding {
+  display: flex;
+  margin-left: 1em;
+
+  img {
+    width: 3em;
+    transition: 0.5s ease all;
+
+    cursor: pointer;
+  }
+}
 </style>
+

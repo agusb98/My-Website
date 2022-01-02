@@ -1,9 +1,9 @@
 <template>
-  <div class="container-fluid p-5">
+  <div class="container-fluid p-0">
     <div class="container-xxl">
-      <div class="row justify-content-between pt-4">
+      <div class="row justify-content-between pt-1">
         <div class="col-xl">
-          <h1>¡Contact with Admin!</h1>
+          <h1>Get In Touch</h1>
           <h2>
             Pregúntanos, cuéntanos qué te gustaría <br />
             estudiar y nosotros te informaremos. ¡Estamos <br />
@@ -344,6 +344,7 @@ export default {
 </script>
 
 <style scoped>
+
 .container-fluid {
   height: 90%;
 }

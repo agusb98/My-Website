@@ -1,238 +1,130 @@
 <template>
   <div class="container-fluid p-0">
-    <section class="section-one p-4">1</section>
-    <section class="section-two p-4">2</section>
-    <section class="section-three p-4">3</section>
-
-    <!-- <div class="header">
-      <h1>This is the Home Page</h1>
-      <p>Any question or remarks? Just write us a message!</p>
-    </div> -->
-
-    <!-- 
-    <div class="container my-shadow">
-      <div class="row p-1">
-        <div class="col-4 p-4">
-          <h2>Contact Information</h2>
-
-          <p class="p-2">
-            Fill up the form and our Team will get back to within 24 hours
-          </p>
-
-          <div class="text-start p-2">
-            <p><i class="far fa-phone">&nbsp; +549 2227 417936</i></p>
+    <section class="section-one p-4">2</section>
+    <section class="section-two p-4">
+      <div
+        id="carouselExampleIndicators"
+        class="carousel slide container-xxl"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="https://www.geekmi.news/__export/1631245370013/sites/debate/img/2021/09/09/zero2.jpg_172596871.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
           </div>
-
-          <div class="text-start p-2">
-            <p><i class="far fa-envelope">&nbsp; agusszurdob@gmail.com</i></p>
+          <div class="carousel-item">
+            <img
+              src="https://www.geekmi.news/__export/1631245370013/sites/debate/img/2021/09/09/zero2.jpg_172596871.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
           </div>
-
-          <div class="text-start p-2">
-            <p><i class="far fa-map-pin">&nbsp; Buenos Aires, Arg</i></p>
-          </div>
-
-          <div class="text-center links">
-            <p>
-              <i class="fab fa-facebook-f"></i>
-              <i class="fab fa-instagram"></i>
-              <i class="fab fa-github"></i>
-            </p>
+          <div class="carousel-item">
+            <img
+              src="https://www.geekmi.news/__export/1631245370013/sites/debate/img/2021/09/09/zero2.jpg_172596871.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
           </div>
         </div>
-
-        <div class="col-8 p-3 d-flex flex-wrap justify-content-between">
-          <div class="form-floating col-md-5 mb-1 needs-validation" novalidate>
-            <input
-              type="name"
-              class="form-control"
-              placeholder="name"
-              required
-            />
-            <label for="floatingInput">First Name</label>
-          </div>
-
-          <div class="form-floating col-md-5 mb-1 needs-validation" novalidate>
-            <input
-              type="surname"
-              class="form-control"
-              placeholder="surname"
-              required
-            />
-            <label for="floatingInput">Last Name</label>
-          </div>
-
-          <div class="form-floating col-md-5 mb-1 needs-validation" novalidate>
-            <input
-              type="email"
-              class="form-control"
-              placeholder="name@example.com"
-            />
-            <label for="floatingInput">Email address</label>
-          </div>
-
-          <div class="form-floating col-md-5 mb-1 needs-validation" novalidate>
-            <input
-              type="text"
-              class="form-control"
-              placeholder="name@example.com"
-            />
-            <label for="floatingInput">Phone Number</label>
-          </div>
-
-          <div class="mx-auto p-1 text-center">
-            <p>What the of website do you need?</p>
-
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="checkbox" value="option1" />
-              <label class="form-check-label" for="inlineCheckbox1"
-                >Web Design</label
-              >
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="checkbox" value="option2" />
-              <label class="form-check-label" for="inlineCheckbox2"
-                >Web Development</label
-              >
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="checkbox" value="option3" />
-              <label class="form-check-label" for="inlineCheckbox3"
-                >Logo Design</label
-              >
-            </div>
-
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="checkbox" value="option3" />
-              <label class="form-check-label" for="inlineCheckbox3"
-                >Other</label
-              >
-            </div>
-          </div>
-
-          <div class="form-floating mb-2 col-12">
-            <textarea placeholder="message" class="form-control"></textarea>
-            <label for="floatingInput">Message</label>
-          </div>
-
-          <div class="col-12 text-end">
-            <button class="btn btn-primary" disabled type="submit">
-              Send Message
-            </button>
-          </div>
-        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
-    </div>
- -->
-
-    <!-- <div class="container-info-app">
-      <section id="copyright">
-        <div class="wrapper">
-          Made by Baez Nuñez, Agustin
-          <br />Vue 3 + Bootstrap 5
-        </div>
-      </section>
-    </div> -->
+    </section>
+    <section class="section-three p-4">
+      sdsds
+      <!-- <div class="d-flex fixed-bottom text-center">
+        <Footer />
+      </div> -->
+    </section>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
+// import Footer from "@/components/Footer";
+
 export default {
   name: "Home",
-  components: {},
+  components: {
+    // Footer,
+  },
 };
 </script>
 
-// <style lang="scss" scoped>
-// .container-fluid {
-//   height: 90%;
-// }
-
-// .header {
-//   text-align: center;
-// }
-
-// .container {
-//   // background-color: #3c0741;
-//   background-color: #ebdcec;
-//   color: #3c0741;
-// }
-
-// .container,
-// .col-4 {
-//   border-radius: 0.5em;
-// }
-
-// .col-4 {
-//   color: #ebdcec;
-//   background-color: #3c0741;
-//   text-align: center;
-// }
-
-// .links {
-//   display: flex;
-//   justify-content: center;
-
-//   i {
-//     font-size: 1.8em;
-//     margin-right: 0.5em;
-//     margin-left: 0.5em;
-
-//     cursor: pointer;
-
-//     &:hover,
-//     &:checked,
-//     &:enabled {
-//       color: #00afea;
-//       border-color: #00afea;
-//     }
-//   }
-// }
-
-// .form-check-input {
-//   cursor: pointer;
-// }
-
-// #copyright {
-//   background: transparent;
-//   color: var(--secondary-color);
-//   margin-bottom: -20px;
-//   text-align: center;
-//   font-size: 15px;
-//   font-style: italic;
-//   font-family: "Playfair Display", serif;
-// }
-
-// .container-info-app {
-//   position: absolute;
-//   top: 93%;
-//   left: 0%;
-//   right: 0%;
-// }
-//
-</style>
-
 <style lang="scss" scoped>
 .container-fluid {
-  height: 90vh;
+  height: 100vh;
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
-}
 
-section {
-  height: 100vh;
-  scroll-snap-align: start;
-}
+  section {
+    height: 100vh;
+    scroll-snap-align: start;
+  }
 
-.section-one {
-  background: brown;
-}
+  .section-one {
+    background-color: #8EC5FC;
+    background-image: linear-gradient(59deg, #8EC5FC 0%, #E0C3FC 100%);
+  }
 
-.section-two {
-  background: green;
-}
+  .section-two {
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
 
-.section-three {
-  background: blue;
+    .carousel {
+      width: 70vw;
+    }
+
+    .carousel-inner {
+      border-radius: 5em;
+    }
+  }
+
+  .section-three {
+    background-color: #D9AFD9;
+    background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+
+  }
 }
 </style>
