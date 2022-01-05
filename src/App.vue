@@ -96,8 +96,9 @@ h1,
 h2,
 h3,
 ul,
-.link,
-p {
+li,
+p,
+.link {
   line-height: 1;
   font-family: "futura_m";
   font-weight: normal;
@@ -107,5 +108,16 @@ p {
 
 h1{
   font-size: 12rem !important;
+}
+
+@keyframes fadeTranslateRight {
+  from{
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0px);
+  }
 }
 </style>

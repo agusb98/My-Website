@@ -355,11 +355,11 @@ export default {
 }
 
 .contact-form {
-  background-color: rgba(51, 51, 51, 0.486);
+  background-color: rgb(0 0 0 / 32%);
 }
 
 .contact-form:hover {
-  background-color: rgba(8, 8, 8, 0.486);
+  background-color: rgb(0 0 0 / 42%);
 }
 
 .success-form {
