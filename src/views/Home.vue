@@ -104,13 +104,11 @@ export default {
   }
 
   .section-one {
-    background-color: #8EC5FC;
-    background-image: linear-gradient(59deg, #8EC5FC 0%, #E0C3FC 100%);
+    background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
   }
 
   .section-two {
-    background-color: #4158D0;
-    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%);
 
     .carousel {
       width: 70vw;
@@ -122,8 +120,7 @@ export default {
   }
 
   .section-three {
-    background-color: #D9AFD9;
-    background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+    background-image: linear-gradient(to top, #96fbc4 0%, #f9f586 100%);
   }
 }
-</style>
+</style>npm run serve
