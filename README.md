@@ -36,3 +36,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 <p align="center">
     <img src="./src/assets/images/contact_page_mobil.png" border-radius="100%" width="250" height="500">
 </p>
+
+<p align="center">
+    <img src="./src/assets/images/navbar_mobil.png" border-radius="100%" width="250" height="500">
+</p>
