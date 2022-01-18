@@ -19,7 +19,7 @@
       <ul id="links" class="d-flex flex-row mr-auto mt-2 mt-lg-0">
         <li v-for="link in links" :key="link" class="nav-item active">
           <router-link class="link" :to="{ path: link.router }"
-            ><a>{{ link.name }}</a></router-link
+            ><a @click="showMinLinks">{{ link.name }}</a></router-link
           >
         </li>
         <li>
@@ -78,8 +78,10 @@ export default {
       var doc = document.getElementById("links");
       doc.classList.toggle("nav-active");
 
-      this.styleLinks();
-      this.rotateBurger();
+      if (window.screen.availWidth < 768) {
+        this.styleLinks();
+        this.rotateBurger();
+      }
     },
     // Animate Links
     styleLinks() {
