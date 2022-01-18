@@ -55,7 +55,6 @@ export default {
 
 /* Global css */
 <style lang="scss">
-
 :root {
   --primary-color: #f8f5ee;
   --secondary-color: #472425;
@@ -106,16 +105,28 @@ p,
   text-shadow: 0 10px 30px rgb(2 11 22 / 50%);
 }
 
-h1{
-  font-size: 12rem !important;
+.form-control {
+  border: none !important;
+}
+
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 12rem !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 6rem !important;
+  }
 }
 
 @keyframes fadeTranslateRight {
-  from{
+  from {
     opacity: 0;
     transform: translateX(50px);
   }
-  to{
+  to {
     opacity: 1;
     transform: translateX(0px);
   }

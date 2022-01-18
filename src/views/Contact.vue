@@ -1,60 +1,47 @@
 <template>
-  <div class="container-fluid p-0">
-    <div class="container-xxl">
-      <div class="row justify-content-between pt-1">
+  <div class="container-fluid">
+    <div class="container-xxl m-auto">
+      <div class="row justify-content-between">
         <div class="col-xl">
           <h1>Get In Touch</h1>
-          <h2>
-            Pregúntanos, cuéntanos qué te gustaría <br />
-            estudiar y nosotros te informaremos. ¡Estamos <br />
-            deseando conocerte!
+          <h2 class="my-4">
+            Pregúntanos, cuéntanos qué te gustaría estudiar y nosotros te
+            informaremos. ¡Estamos deseando conocerte!
           </h2>
         </div>
 
-        <div class="col-4">
+        <div class="col-4 my-4">
           <h3>¡Estamos en Malasaña!</h3>
-          <div class="text-start p-2">
+          <div class="text-start">
             <p>
               <i class="far fa-envelope">&nbsp;&nbsp; agusszurdob@gmail.com</i>
             </p>
           </div>
 
-          <div class="text-start p-2">
+          <div class="text-start">
             <p><i class="far fa-phone">&nbsp;&nbsp; (+549) 2227 417936</i></p>
           </div>
 
-          <div class="text-start p-2">
+          <div class="text-start">
             <p><i class="far fa-map-pin">&nbsp;&nbsp; Buenos Aires, Arg</i></p>
           </div>
         </div>
       </div>
 
       <!--  Progress Bar  -->
-      <div class="row-3 mt-2 p-4 text-center justify-content-center">
-        <div class="progress my-shadow" style="height: 3em">
-          <div
-            class="progress-bar-striped progress-bar-animated bg-success active"
-            role="progressbar"
-            :style="{ width: progress + '%' }"
-            aria-valuenow="0"
-            aria-valuemin="0"
-            aria-valuemax="100"
-          ></div>
-        </div>
+      <div class="progress my-shadow mb-2" style="height: 3em">
+        <div
+          class="progress-bar-striped progress-bar-animated bg-success active"
+          role="progressbar"
+          :style="{ width: progress + '%' }"
+          aria-valuenow="0"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        ></div>
       </div>
 
       <form v-if="progress == 1" @submit.prevent="formOne">
-        <div
-          class="
-            contact-form
-            row
-            mt-2
-            p-2
-            pt-5 pt-5
-            text-center
-            justify-content-center
-          "
-        >
+        <div class="contact-form row text-center justify-content-center py-4">
           <div class="form-floating col-md-3">
             <input
               type="text"
@@ -85,25 +72,15 @@
             <label for="floatingInput">Phone Number</label>
           </div>
 
-          <div class="col-6 mt-4 text-end">
+          <div class="col-6 text-end mt-3">
             <button class="btn btn-primary" type="submit">Next</button>
           </div>
         </div>
       </form>
 
       <form v-if="progress == 30" @submit.prevent="formTwo">
-        <div
-          class="
-            contact-form
-            row
-            mt-2
-            p-2
-            pt-4
-            text-center
-            justify-content-center
-          "
-        >
-          <div class="mx-auto pt-3 text-center">
+        <div class="contact-form row text-center justify-content-center">
+          <div class="text-center my-3">
             <h3>What the of website do you need?</h3>
 
             <div class="form-check form-check-inline">
@@ -145,7 +122,7 @@
             </div>
           </div>
 
-          <div class="col-6 mt-4">
+          <div class="col-6 mb-3">
             <button
               class="btn btn-primary"
               @click="
@@ -157,25 +134,15 @@
             </button>
           </div>
 
-          <div class="col-6 mt-4">
+          <div class="col-6 mb-3">
             <button class="btn btn-primary" type="submit">Next</button>
           </div>
         </div>
       </form>
 
       <form v-if="progress == 60" @submit.prevent="formThree">
-        <div
-          class="
-            contact-form
-            row
-            mt-2
-            p-2
-            pt-5
-            text-center
-            justify-content-center
-          "
-        >
-          <div class="form-floating mb-2 col-9">
+        <div class="contact-form row text-center justify-content-center my-3">
+          <div class="form-floating col-9 mt-3">
             <textarea
               v-model="message"
               placeholder="message"
@@ -184,7 +151,7 @@
             <label for="floatingInput">Message</label>
           </div>
 
-          <div class="col-6 mt-4">
+          <div class="col-6 my-3">
             <button
               class="btn btn-primary"
               @click="
@@ -197,7 +164,7 @@
             </button>
           </div>
 
-          <div class="col-6 mt-4">
+          <div class="col-6 my-3">
             <button
               class="btn btn-primary"
               @click="progress = 60"
@@ -211,17 +178,9 @@
 
       <div
         v-if="progress == 100"
-        class="
-          success-form
-          row
-          mt-2
-          p-2
-          pt-5
-          text-center
-          justify-content-center
-        "
+        class="success-form row text-center justify-content-center"
       >
-        <div class="col-6 mt-4 pb-5">
+        <div class="col-6 my-3 py-3">
           <h3><i class="fas fa-check-circle"></i> Message sended</h3>
         </div>
       </div>
@@ -344,9 +303,24 @@ export default {
 </script>
 
 <style scoped>
+.container-fluid {
+  overflow-y: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+.container-fluid::-webkit-scrollbar {
+  /* WebKit */
+  width: 0;
+  height: 0;
+}
 
 .container-fluid {
   height: 90%;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
 }
 
 .contact-form,
@@ -376,5 +350,22 @@ export default {
 
 input {
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 768px) {
+  .col-4 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .form-floating {
+    margin: 0.3vh;
+  }
+
+  form, .success-form {
+    margin-bottom: 8vh;
+  }
 }
 </style>
