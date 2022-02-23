@@ -29,7 +29,7 @@
       </div>
 
       <!--  Progress Bar  -->
-      <div class="progress my-shadow mb-2" style="height: 3em">
+      <div class="progress my-shadow" style="height: 3em">
         <div
           class="progress-bar-striped progress-bar-animated bg-success active"
           role="progressbar"
@@ -40,7 +40,7 @@
         ></div>
       </div>
 
-      <form v-if="progress == 1" @submit.prevent="formOne">
+      <form v-if="progress == 1" @submit.prevent="formOne" class="my-2">
         <div class="contact-form row text-center justify-content-center py-4">
           <div class="form-floating col-md-3">
             <input
